@@ -1,19 +1,21 @@
 // © 2018 CalvinTLincoln. All rights reserved.
 
 const config = require("./botconfig.json");
+const webMod = require("./webMod.js");
 const Discord = require("discord.js");
 const fs = require("fs");
 const http = require("http");
 const express = require("express");
-const app = express();
 
 const bot = new Discord.Client({disableEveryone: false});
+const app = express();
 bot.commands = new Discord.Collection()
 
 http.createServer(function(req, res) {
   res.writeHead(200, {'Content-Type': 'text/plain'});
   res.write('Hello World!');
   res.end();
+  webMod.run(req, res);
   console.log("hi");
 }).listen(process.env.PORT || 8080);
 
