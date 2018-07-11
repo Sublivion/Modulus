@@ -3,10 +3,19 @@
 const config = require("./botconfig.json");
 const Discord = require("discord.js");
 const fs = require("fs");
-const http = require('http');
+const http = require("http");
+const express = require("express");
+const app = express();
 
 const bot = new Discord.Client({disableEveryone: false});
 bot.commands = new Discord.Collection()
+
+http.createServer(function(req, res) {
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.write('Hello World!');
+  res.end();
+  console.log("hi");
+}).listen(8080);
 
 function loadCode(){
   fs.readdir("./commands/", (err, files) => {
@@ -37,7 +46,7 @@ function clean(text) {
 
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
-  bot.user.setActivity(`Watching ${bot.guilds.size} servers | ${config.prefix}-help`);
+  bot.user.setActivity(`Watching ${bot.guilds.size} servers | ${config.prefix}help`);
   bot.user.setStatus("idle");
 });
 
