@@ -15,7 +15,7 @@ http.createServer(function(req, res) {
   res.write('Hello World!');
   res.end();
   console.log("hi");
-}).listen(8080);
+}).listen(process.env.PORT || 8080);
 
 function loadCode(){
   fs.readdir("./commands/", (err, files) => {
