@@ -1,7 +1,7 @@
 // © 2018 CalvinTLincoln. All rights reserved.
 
 const config = require("./botconfig.json");
-const webMod = require("./webMod.js");
+const webMod = require("./webmod.js");
 const Discord = require("discord.js");
 const fs = require("fs");
 const http = require("http");
