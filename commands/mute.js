@@ -1,3 +1,5 @@
+// © 2018 CalvinTLincoln. All rights reserved.
+
 const Discord = require("discord.js");
 const ms = require("ms")
 

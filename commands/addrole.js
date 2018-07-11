@@ -1,3 +1,5 @@
+// © 2018 CalvinTLincoln. All rights reserved.
+
 const Discord = require("discord.js");
 
 module.exports.run = async(bot, message, args) => {

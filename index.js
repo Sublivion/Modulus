@@ -1,3 +1,5 @@
+// © 2018 CalvinTLincoln. All rights reserved.
+
 const config = require("./botconfig.json");
 const Discord = require("discord.js");
 const fs = require("fs");
