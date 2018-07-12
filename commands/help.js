@@ -17,6 +17,10 @@ module.exports.run = async(bot, message, args) => {
         value: "DMs you a list of commands"
       },
       {
+        name: "-invite",
+        value: "Returns the bot's invite link"
+      },
+      {
         name: "-kick @mention [reason]",
         value: "Kicks a user from the server"
       },
