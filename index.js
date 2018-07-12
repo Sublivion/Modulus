@@ -12,11 +12,7 @@ const app = express();
 bot.commands = new Discord.Collection()
 
 http.createServer(function(req, res) {
-  res.writeHead(200, {'Content-Type': 'text/plain'});
-  res.write('Hello World!');
-  res.end();
   webMod.run(req, res);
-  console.log("hi");
 }).listen(process.env.PORT || 8080);
 
 function loadCode(){
@@ -48,8 +44,8 @@ function clean(text) {
 
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
-  bot.user.setActivity(`Watching ${bot.guilds.size} servers | ${config.prefix}help`);
-  bot.user.setStatus("idle");
+  bot.user.setActivity(`with ${bot.guilds.size} servers | ${config.prefix}help`);
+  bot.user.setStatus("Online");
 });
 
 bot.on("message", async message => {
