@@ -16,9 +16,17 @@ module.exports.run = async(req, res) => {
 			res.write(content);
 			res.end();
 	  	} else {
-	  		res.writeHead(404, {'Content-Type': 'text/plain'});
-	  		res.write('i really have better things to be doing than making error 404 pages :/');
-	  		res.end();
+	  		fs.readFile(path.join('Pages', '404.html') function(err, content) {
+	  			if (!err) {
+					res.writeHead(404, {'Content-Type': 'text/html'})
+					res.write(content);
+					res.end();
+	  			else
+		  			res.writeHead(404, {'Content-Type': 'text/plain'});
+		  			res.write('so basically we tried to send you an error page but that errord so um this is awkward');
+		  			res.end();
+		  		}
+	  		})
 	  	};
   	})
   };
