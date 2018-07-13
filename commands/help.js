@@ -17,10 +17,6 @@ module.exports.run = async(bot, message, args) => {
         value: "DMs you a list of commands"
       },
       {
-        name: "-invite",
-        value: "Returns the bot's invite link"
-      },
-      {
         name: "-kick @mention [reason]",
         value: "Kicks a user from the server"
       },
@@ -47,6 +43,26 @@ module.exports.run = async(bot, message, args) => {
       {
         name: "-removerole @mention [rolename]",
         value: "Removes a specified role from a user"
+      },
+      {
+        name: "-invite",
+        value: "Echos back the invite link for Modulus"
+      },
+      {
+        name: "-setprefix [prefix]",
+        value: "Sets the bots prefix to your desired prefix"
+      },
+      {
+        name: "-create [roleName]",
+        value: "Creates a public role for everyone in the server to join"
+      },
+      {
+        name: "-join [roleName]",
+        value: "Joins the specified public role"
+      },
+      {
+        name: "-leave [roleName]",
+        value: "Leaves the specified role name"
       }
     ],
   }});
