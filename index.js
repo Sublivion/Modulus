@@ -5,6 +5,7 @@ const webMod = require("./webmod.js");
 const Discord = require("discord.js");
 const fs = require("fs");
 const http = require("http");
+const raven = require("raven");
 
 require('dotenv').config()
 
@@ -84,9 +85,10 @@ bot.on("message", async message => {
         message.channel.send(clean(evaled), {code:"xl"});
     } catch(err){
       message.channel.send(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
+      raven.captureException(err);
     }
   }
 
 });
 
-bot.login(process.env.TOKEN);
+bot.login(botconfig.token);
