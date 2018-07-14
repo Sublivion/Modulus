@@ -6,6 +6,8 @@ const Discord = require("discord.js");
 const fs = require("fs");
 const http = require("http");
 
+require('dotenv').config()
+
 const bot = new Discord.Client({disableEveryone: false});
 bot.commands = new Discord.Collection()
 
@@ -72,7 +74,7 @@ bot.on("message", async message => {
   }
 
   if (cmd === `${prefix}exec`){
-    if (message.author.id !== config.ownerID) return;
+    if (message.author.id !== config.process.env.OWNERID) return;
     try {
       var code = args.join(" ");
       var evaled = eval(code);
@@ -87,4 +89,4 @@ bot.on("message", async message => {
 
 });
 
-bot.login(config.token);
+bot.login(process.env.TOKEN);
