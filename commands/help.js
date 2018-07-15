@@ -63,6 +63,10 @@ module.exports.run = async(bot, message, args) => {
       {
         name: "-leave [roleName]",
         value: "Leaves the specified role name"
+      },
+      {
+        name: "-vote [input]",
+        value: "Initates a poll with the given input and two reactions, yes or no."
       }
     ],
   }});
