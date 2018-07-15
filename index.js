@@ -8,6 +8,7 @@ const http = require("http");
 const raven = require("raven");
 
 require('dotenv').config()
+raven.config('https://c3e4ac461df84a6795fea80f06a414d1@sentry.io/1243349').install();
 
 const bot = new Discord.Client({disableEveryone: false});
 bot.commands = new Discord.Collection()
