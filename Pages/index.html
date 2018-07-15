@@ -3,9 +3,15 @@
 <!DOCTYPE html>
 
 <html>
+    
+<!-- Imports-->
 <link rel='stylesheet' href='https://www.w3schools.com/w3css/4/w3.css'>
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+
 <head>
     <title>Modulus Bot for Discord</title>
+    <link rel='icon' href='icons/Modulus.png'/>
+    
     <meta charset='UTF-8'>
     <meta name='description' content='A new discord bot under development, controllable via the web and commands.'>
     <meta name='keywords' content='discord, bot, website, commands, control, moderation, moderator, music bot, mod, sublivion, calvintlincoln'>
@@ -14,44 +20,71 @@
 </head>
 <body>
 
-<header class='w3-container w3-teal'>
-    <h1>Modulus Bot for Discord</h1>
-    <p>By CalvinTLincoln and Sublivion</p>
+<!-- Header -->
+<header class='w3-container w3-card w3-theme-d4' style='position: fixed; width: 100%; height: 36px'>
+    <a class='w3-button w3-card w3-theme-d4' style='height: 100%; float: left;' href='index.html'>Modulus</a>
+    <a class='w3-button w3-card w3-theme-d4' style='height: 100%; float: right;' href='https://discordapp.com/api/oauth2/authorize'>Log In</a>
 </header>
 
 <br>
 <br>
 
-<!-- Panels -->
-<div class='w3-container'>
-<a class='w3-btn w3-green' style='text-align: left; width: 100%' href='https://discordapp.com/oauth2/authorize?client_id=355458309333188609&permissions=8&scope=bot'>
-    <h1>Invite</h1>
-    <p>Invite Modulus to your server!</p>
-</a>
-<br/>
-<br/>
-<a class='w3-btn w3-red' style='text-align: left; width: 100%' href='#'>
-    <h1>Control</h1>
-    <p>Control Modulus from the web!</p>
-</a>
-<br/>
-<br/>
-<a class='w3-btn w3-green' style='text-align: left; width: 100%' href='#'>
-    <h1>Logs</h1>
-    <p>View your server logs from the web!</p>
-</a>
-<br/>
-<br/>
-<a class='w3-btn w3-red' style='text-align: left; width: 100%' href='donate.html'>
-    <h1>Donate</h1>
-    <p>To receive special privelages and commands!</p>
-</a>
-<br/>
-<br/>
-<a class='w3-btn w3-green' style='text-align: left; width: 100%' href='commands.html'>
-    <h1>Commands</h1>
-    <p>View the commands list!</p>
-</a>
+<div class='w3-container' align='center'>
+    <img src='icons/Modulus.png' height=50px style='position: absolute; left: 10px;'/>
+    <div class='w3-card w3-green' style='position: absolute; right: 10px; padding: 5px'>
+        <p> ONLINE </p>
+    </div>
+    <h1>
+        Home
+    </h1>
+    
+     <!-- Panels -->
+    <div class='w3-container w3-card w3-pale-blue'>
+        <h2>Dashboard</h2>
+        <div class='w3-container'>
+            <a class='w3-btn w3-card w3-theme-d3' style='text-align: center;' href='https://discordapp.com/oauth2/authorize?client_id=355458309333188609&permissions=8&scope=bot'>
+                <img src='icons/White/Invite.png' height=75px>
+                <h3>Invite</h3>
+            </a>
+            <a class='w3-btn w3-card w3-theme-d2' style='text-align: center;' href='admin.html'>
+                <img src='icons/White/Control.png' height=75px>
+                <h3>Control</h3>
+            </a>
+            <a class='w3-btn w3-card w3-theme-d3' style='text-align: center;' href='logs.html'>
+                <img src='icons/White/Logs.png' height=75px>
+                <h3>Logs</h3>
+            </a>
+            <a class='w3-btn w3-card w3-theme-d2' style='text-align: center;' href='commands.html'>
+                <img src='icons/White/Commands.png' height=75px>
+                <h3>Cmds</h3>
+            </a>
+            <a class='w3-btn w3-card w3-theme-d3' style='text-align: center;' href='donate.html'>
+                <img src='icons/White/Donate.png' height=75px>
+                <h3>Donate</h3>
+            </a>
+            <br/>
+            <br/>
+        </div>
+    </div>
+    
+    <br>
+    
+    <div class='w3-container w3-card w3-light-gray'>
+        <h2>About</h2>
+        <p>Modulus is a discord bot in development by CalvinTLincoln and Sublivion <i>(SUB#2251)</i>. It will have web control and logs, as well as some awesome commands and features.</p>
+    </div>
+    <br/>
+    <div class='w3-container w3-card w3-light-gray'>
+        <h2>Getting Started</h2>
+        <p>To get started, you must first <a class='w3-button w3-card w3-theme-d2' href='https://discordapp.com/api/oauth2/authorize'>connect your discord account</a></p>
+        <p>Then, invite the bot to your server using the invite button below.</p>
+        <p>Set up your server using the Control page</p>
+        <p>You can view your logs using the Logs page</p>
+        <p>If at any point you need a reminder of the commands, hit the Commands button or <br/> say -help</p>
+        <p>Please consider a donation if you want us to spend less time looking for money and more developing! <br> It helps host the bot and pay for the domain name. + you get extra stuff</p>
+    </div>
+
+    <br/>
 </div>
 
 <br/>
@@ -59,9 +92,8 @@
 <br/>
 <br/>
 
-<footer class='w3-container w3-teal' style='position: fixed; width: 100%; bottom: 0;'>
-    <p>© 2018 Sublivion / Anthony O’Brien. All rights reserved.</p>
-</footer>
+<!-- Footer -->
+<footer class='w3-container w3-card w3-theme-d4' style='position: fixed; width: 100%; bottom: 0;'><p style='font-size: small'>©2018 Sublivion / Anthony O’Brien. All Rights Reserved.</p></footer>
 
 </body>
 </html>

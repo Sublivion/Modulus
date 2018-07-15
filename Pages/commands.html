@@ -1,72 +1,89 @@
-<!-- © 2018 Sublivion / Anthony O’Brien. All rights reserved. -->
+<!-- © 2018 Sublivion / Anthony O’Brien. All Rights Reserved. -->
 
 <!DOCTYPE html>
 
 <html>
+    
+<!-- Imports-->
 <link rel='stylesheet' href='https://www.w3schools.com/w3css/4/w3.css'>
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+
 <head>
     <title>Modulus</title>
+    <link rel='icon' href='icons/Modulus.png'/>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
-<header class='w3-container w3-teal'>
-    <h1>Modulus Bot for Discord</h1>
-    <p>By CalvinTLincoln and Sublivion</p>
+<!-- Header -->
+<header class='w3-container w3-card w3-theme-d4' style='position: fixed; width: 100%; height: 36px'>
+    <a class='w3-button w3-card w3-theme-d4' style='height: 100%; float: left;' href='index.html'>Modulus</a>
+    <a class='w3-button w3-card w3-theme-d4' style='height: 100%; float: right;' href='https://discordapp.com/api/oauth2/authorize'>Log In</a>
 </header>
 
 <!-- Back button -->
-<a class='w3-button w3-blue' style='position: absolute; left: 0' href='index.html'> < Home</a>
+<a class='w3-button w3-card w3-blue' style='position: absolute; left: 0; width: 7%; padding: 15px' href='index.html'> < Home</a>
 
 <br/>
 <br/>
 
 <div class='w3-container'>
     <h1>Commands list</h1>
-    <div class='w3-container'>
-        <div class='w3-panel w3-pale-green' style='text-align: left; width: 100%'>
-            <h1>-help</h1>
+    <div class='w3-container w3-card w3-pale-green' style='width:50%; float: left'>
+        <h2>Info</h2>
+        <div class='w3-panel w3-theme-d2 w3-card' style='text-align: left; width: 100%'>
+            <h3>-help</h3>
             <p>DMs you with a list of commands</p>
         </div>
-        <div class='w3-panel w3-pale-red' style='text-align: left; width: 100%'>
-            <h1>-invite</h1>
+        <div class='w3-panel w3-theme-d3 w3-card' style='text-align: left; width: 100%'>
+            <h3>-invite</h3>
             <p>Returns the bot's invite link</p>
         </div>
-       <div class='w3-panel w3-pale-green' style='text-align: left; width: 100%'>
-            <h1>-kick @mention [reason]</h1>
-            <p>Returns the bot's invite link</p>
+    </div>
+    <div class='w3-container w3-card w3-pale-red' style='width:50%; float: right'>
+        <h2>Moderator</h2>
+        <div class='w3-panel w3-theme-d2 w3-card' style='text-align: left; width: 100%'>
+            <h3>-kick @mention [reason]</h3>
+            <p>Kicks a user from the server</p>
         </div>
-       <div class='w3-panel w3-pale-red' style='text-align: left; width: 100%'>
-            <h1>-ban @mention [time] [reason]</h1>
-            <p>Returns the bot's invite link</p>
+        <div class='w3-panel w3-theme-d3 w3-card' style='text-align: left; width: 100%'>
+            <h3>-ban @mention [1y1w1d1h1m1s] [reason]</h3>
+            <p>Bans a user from the server, can specify amount of time. A permanent ban with reason would be ban @mention 0 reason</p>
         </div>
-        <div class='w3-panel w3-pale-green' style='text-align: left; width: 100%'>
-            <h1>-mute @mention [time] [reason]</h1>
-            <p>Returns the bot's invite link</p>
+        <div class='w3-panel w3-theme-d3 w3-card' style='text-align: left; width: 100%'>
+            <h3>-mute @mention [1y1w1d1h1m1s] [reason]</h3>
+            <p>Mutes a user throughout the whole server if they are not currently muted</p>
         </div>
-        <div class='w3-panel w3-pale-red' style='text-align: left; width: 100%'>
-            <h1>-purge [number]</h1>
-            <p>Deletes specified number of messages</p>
+        <div class='w3-panel w3-theme-d3 w3-card' style='text-align: left; width: 100%'>
+            <h3>-purge [number]</h3>
+            <p>Deletes the specified number of messages</p>
         </div>
-        <div class='w3-panel w3-pale-green' style='text-align: left; width: 100%'>
-            <h1>-ping</h1>
-            <p>Pong, [response time]</p>
-        </div>
-        <div class='w3-panel w3-pale-red' style='text-align: left; width: 100%'>
-            <h1>-addrole @mention [rolename]</h1>
+        <div class='w3-panel w3-theme-d3 w3-card' style='text-align: left; width: 100%'>
+            <h3>-addrole @mention [rolename]</h3>
             <p>Adds a user to the specified role name</p>
         </div>
-        <div class='w3-panel w3-pale-green' style='text-align: left; width: 100%'>
-            <h1>-addrole @mention [rolename]</h1>
-            <p>Adds a user to the specified role name</p>
+        <div class='w3-panel w3-theme-d3 w3-card' style='text-align: left; width: 100%'>
+            <h3>-removerole @mention [rolename]</h3>
+            <p>Removes a specified role from a user</p>
         </div>
-        <div class='w3-panel w3-pale-red' style='text-align: left; width: 100%'>
-            <h1>-removerole @mention [rolename]</h1>
-            <p>Removes a user from the specified role name</p>
+    </div>
+    <div class='w3-container w3-card w3-pale-yellow' style='width:50%; float: right'>
+        <h2>Fun</h2>
+        <div class='w3-panel w3-theme-d2 w3-card' style='text-align: left; width: 100%'>
+            <h3>-help</h3>
+            <p>DMs you with a list of commands</p>
         </div>
-        <div class='w3-panel w3-pale-blue' style='text-align: left; width: 100%'>
-            <h1>More coming soon</h1>
-            <p>:)</p>
+        <div class='w3-panel w3-theme-d3 w3-card' style='text-align: left; width: 100%'>
+            <h3>-invite</h3>
+            <p>Returns the bot's invite link</p>
+        </div>
+    </div>
+    <div class='w3-container w3-card w3-sand' style='width:50%; float: right'>
+        <h2>Misc</h2>
+        <div class='w3-panel w3-theme-d2 w3-card' style='text-align: left; width: 100%'>
+            <h3>-ping</h3>
+            <p>Pong, echos the response time between the bot and discord</p>
         </div>
     </div>
 </div>
@@ -76,9 +93,8 @@
 <br/>
 <br/>
 
-<footer class='w3-container w3-teal' style='position: fixed; width: 100%; bottom: 0;'>
-    <p>© 2018 Sublivion / Anthony O’Brien. All rights reserved.</p>
-</footer>
+<!-- Footer -->
+<footer class='w3-container w3-card w3-theme-d4' style='position: fixed; width: 100%; bottom: 0;'><p style='font-size: small'>©2018 Sublivion / Anthony O’Brien. All Rights Reserved.</p></footer>
 
 </body>
 </html>
