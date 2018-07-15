@@ -67,7 +67,11 @@ module.exports.run = async(bot, message, args) => {
       {
         name: "-vote [input]",
         value: "Initates a poll with the given input and two reactions, yes or no."
-      }
+      },
+      {
+        name: "-8ball [input]",
+        value: "Replies back with an 8ball response to your input"
+      },
     ],
   }});
 }
