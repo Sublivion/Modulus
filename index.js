@@ -54,6 +54,14 @@ bot.on("message", async message => {
   if (message.author.bot) return;
   if (message.channel.type === "dm") return;
 
+  if(message.content == "hey modulus"){
+    return message.channel.send("Yes, sir?");
+  };
+
+  if(message.content == "lets start deving, ok?"){
+    return message.channel.send("Yes sir, after you.");
+  };
+
   let prefixes = JSON.parse(fs.readFileSync("./prefixes.json", "utf-8"));
   if(!prefixes[message.guild.id]){
     prefixes[message.guild.id] = {
