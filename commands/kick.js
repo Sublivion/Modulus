@@ -35,7 +35,7 @@ module.exports.run = async(bot, message, args) => {
     ],
     }});
   };
-  user.kick(reason);
+  message.guild.member(user).kick(reason);
   return message.channel.send({embed:{
     color: 15844367,
     fields: [{
