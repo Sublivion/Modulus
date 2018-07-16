@@ -4,8 +4,21 @@ const Discord = require("discord.js");
 const ms = require("ms")
 
 module.exports.run = async(bot, message, args) => {
+  
+  if(!message.member.hasPermission("MANAGE_MESSAGES")){
+    return message.channel.send({embed:{
+      color: 15158332,
+      fields: [{
+        name: "Error",
+        value: "You must have the permission **MANAGE_MESSAGES** to run this command"
+      },
+    ],
+    }});
+  }
+  
   let muteUser = message.mentions.members.first() || message.guild.members.get(args[0]);
   let muteRole = message.guild.roles.find(`name`, "muted")
+  
   if(!muteUser){
     return message.channel.send({embed:{
       color: 15158332,
