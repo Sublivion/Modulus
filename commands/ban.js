@@ -1,5 +1,3 @@
-// © 2018 CalvinTLincoln. All rights reserved.
-
 const Discord = require("discord.js");
 
 module.exports.run = async(bot, message, args) => {
@@ -35,7 +33,7 @@ module.exports.run = async(bot, message, args) => {
     ],
     }});
   }
-  user.ban(reason)
+  message.guild.member(user).ban(reason);
   return message.channel.send({embed:{
     color: 15844367,
     fields: [{
