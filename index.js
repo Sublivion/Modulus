@@ -99,4 +99,4 @@ bot.on("message", async message => {
 
 });
 
-bot.login(process.argv[2]);
+bot.login(process.argv[2] || config.token);
