@@ -6,15 +6,16 @@ const Discord = require("discord.js");
 const fs = require("fs");
 const http = require("http");
 const raven = require("raven");
+const rethink = require("rethinkdb");
 
 raven.config('https://c3e4ac461df84a6795fea80f06a414d1@sentry.io/1243349').install();
 
-const bot = new Discord.Client({disableEveryone: false});
+const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection()
 
 http.createServer(function(req, res) {
   webMod.run(req, res);
-}).listen(process.env.PORT || 8080);
+}).listen(process.env.PORT || 5050);
 
 function loadCode(){
   fs.readdir("./commands/", (err, files) => {
